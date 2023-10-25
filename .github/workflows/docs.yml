@@ -1,0 +1,60 @@
+name: docs
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '**/__tests__/**'
+  workflow_dispatch:
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    env:
+      DOCS_GA_ID: 
+      NODE_VERSION: '18'
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build documentation site
+        run: |
+          pnpm docs:release
+          git clone https://${{secrets.CODING_USERNAME}}:${{secrets.CODING_PASSWD}}@e.coding.net/weidongshan/vuepress-next-docs/aw-r128-docs.git --branch master --single-branch master --depth=1
+          echo "ls master" && ls master
+          cp -r docs/.vuepress/dist/* master
+          touch master/.nojekyll
+          cd master
+          
+          git config --local user.email "baiwenwang@100ask.com"
+          git config --local user.name "www.100ask.net"
+          git add .
+          git commit -m "Update documentation" -a || true
+          git push origin master
+          cd -
+
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2.2.0
+        with:
+          repo: 100askTeam/AW-R128-Docs
+          target_branch: gh-pages
+          build_dir: docs/.vuepress/dist
+          fqdn: aw-r128.100ask.org
+        env:
+          GH_PAT: ${{ secrets.GH_PAGES_TOKEN }}
