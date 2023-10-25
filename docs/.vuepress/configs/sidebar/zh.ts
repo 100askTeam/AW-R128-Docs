@@ -1,12 +1,14 @@
 import type { SidebarConfig } from '@vuepress/theme-default'
 
 export const sidebarZh: SidebarConfig = {
-    '/zh/Introduction/': [
+    '/zh/quick-start/chip-introduction/': [
         {
-          text: 'R128入门基础',
+          text: '芯片概述',
           collapsible: true,
           children: [
-            '/zh/Introduction/chapter1.md',
+            '/zh/quick-start/chip-introduction/chapter1.md',
+            '/zh/quick-start/chip-introduction/chapter2.md',
+            '/zh/quick-start/chip-introduction/chapter3.md',
           ],
         },
       ],
