@@ -3,6 +3,10 @@ import { version } from '../meta.js'
 
 export const navbarZh: NavbarConfig = [
   {
+    text: '入门基础',
+    link: '/zh/Introduction/chapter1.md',
+  },
+  {
     text: `学习套件`,
     children: [
       {
