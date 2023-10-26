@@ -4,7 +4,7 @@ import { version } from '../meta.js'
 export const navbarZh: NavbarConfig = [
   {
     text: '入门基础',
-    link: '/zh/quick-start/chip-introduction/chapter1.md',
+    link: '/zh/quick-start/part1/chapter1.md',
   },
   {
     text: `学习套件`,
