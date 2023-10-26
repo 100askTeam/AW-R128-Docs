@@ -18,6 +18,7 @@ export const sidebarZh: SidebarConfig = {
             '/zh/quick-start/part2/chapter1.md',
             '/zh/quick-start/part2/chapter2.md',
             '/zh/quick-start/part2/chapter3.md',
+            '/zh/quick-start/part2/chapter4.md',
           ],
         },
         {
