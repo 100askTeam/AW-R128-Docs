@@ -9,15 +9,16 @@ R128是一颗专为“音视频解码”而打造的全新高集成度 SoC，主
 
 ## 芯片应用场景
 
-![image1](http://photos.100ask.net/aw-r128-docs/Introduction/chapter1/image1.jpg)
+![image1](http://photos.100ask.net/aw-r128-docs/quick-start/part1/chapter1/image1.jpg)
+
 
 ## 芯片实物图
 
-![image-2](http://photos.100ask.net/aw-r128-docs/Introduction/chapter1/image2.png)
+![image2](http://photos.100ask.net/aw-r128-docs/quick-start/part1/chapter1/image2.png)
 
 ## 芯片框图
 
-![image-3](http://photos.100ask.net/aw-r128-docs/Introduction/chapter1/image3.png)
+![image3](http://photos.100ask.net/aw-r128-docs/quick-start/part1/chapter1/image3.png)
 
 ## 芯片特性简介
 
