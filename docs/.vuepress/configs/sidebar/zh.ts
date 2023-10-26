@@ -17,6 +17,7 @@ export const sidebarZh: SidebarConfig = {
           children: [
             '/zh/quick-start/part2/chapter1.md',
             '/zh/quick-start/part2/chapter2.md',
+            '/zh/quick-start/part2/chapter3.md',
           ],
         },
       ],
