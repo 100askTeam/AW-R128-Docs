@@ -12,7 +12,7 @@ R128 包含 3 个核，需要编译 M33+C906+HIFI5 共3 个核的镜像。启动
 
 ## SDK 软件框架
 
-![image1](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter3/image1.png)
+![image1](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter3/image1.png)
 
 R128 软件框架如上图所示，一共4 层，分别为硬件层、内核层、组件层、应用层。
 

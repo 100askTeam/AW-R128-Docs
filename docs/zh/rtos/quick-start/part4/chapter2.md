@@ -79,7 +79,7 @@ lunch_rtos r128s2_m33
 
 直接取消勾选即可：
 
-![image1](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image1.jpeg)
+![image1](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image1.jpeg)
 
 ### 关闭 C906 核心
 
@@ -92,7 +92,7 @@ lunch_rtos r128s2_m33
 
 直接取消勾选即可：
 
-![image1](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image1.jpeg)
+![image1](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image1.jpeg)
 
 ## 修改核心运行内存空间
 
@@ -113,7 +113,7 @@ lunch_rtos r128s2_m33
 
 直接取消勾选即可。
 
-![image1](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image1.jpeg)
+![image1](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image1.jpeg)
 
 2. 将 M33 和 C906 设置成在 HSPSRAM 运行
 
@@ -126,13 +126,13 @@ lunch_rtos r128s2_m33
 
 接着运行 `mrtos_menuconfig` 修改启动地址，所需要修改的配置如下图所示：
 
-![image2](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image2.jpeg)
+![image2](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image2.jpeg)
 
 > lspsram 地址空间为 0x8000000-0x87fffff，hspsram 地址空间为 0xc000000-0xc7fffff。
 
 这里将所需要的修改的核的地址，将8改成c即可。如修改 M33 的起始地址，将 `0x08004000`，修改成`0x0c004000` 即可，如下图。
 
-![image3](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image3.jpeg)
+![image3](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image3.jpeg)
 
 然后保存配置，重新编译 M33 方案。接下来修改 C906 的地址，选择 C906 的方案
 
@@ -143,7 +143,7 @@ lunch_rtos r128s2_c906
 
 接着运行 `mrtos_menuconfig` 修改启动地址，所需要修改的配置如下图所示：
 
-![image4](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image4.jpeg)
+![image4](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image4.jpeg)
 
 然后保存配置，重新编译 C906 方案。
 
@@ -151,7 +151,7 @@ lunch_rtos r128s2_c906
 
 首先，确认自己方案使用的 `image_header` 文件，运行一次打包的命令 `pack`，从打包的 `log` 中能看出方案所选的文件，如下图：
 
-![image4-1](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image4-1.jpeg)
+![image4-1](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image4-1.jpeg)
 
 如果需要修改 M33 的地址，则只修改 M33 的即可，C906同理。如果取消启动 DSP，则直接注销掉 DSP的配置代码。
 
@@ -181,11 +181,11 @@ index 5c83ac1..fc87d06 100755
 
 可以在 SDK 中运行 kamp 命令查看代码的内存分布
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image5.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image5.png)
 
 可以在最后查看内存的总使用情况
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image6.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image6.png)
 
 ## 配置XIP
 
@@ -193,9 +193,9 @@ R128-S2 内置 NOR FLASH，可以将运行效率要求不高的代码保存在 X
 
 配置 XIP 需要把对应的函数和库文件加入 xip.lds.S 中，具体语法请参照 ld 语法。
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image7.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image7.png)
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image8.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image8.png)
 
 ## 配置多个堆内存
 
@@ -205,7 +205,7 @@ R128-S2 内置 NOR FLASH，可以将运行效率要求不高的代码保存在 X
 
 配置前进入 C906 核心运行 free 命令查看当前内存使用分布情况。
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image9.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image9.png)
 
 ### 关闭 DSP 核心
 
@@ -220,11 +220,11 @@ lunch_rtos r128s2_m33
 
 直接取消勾选即可。
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image10.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image10.png)
 
 修改后请重新编译 M33 核心的固件。
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image11.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image11.png)
 
 ### 将 HPSRAM 全部分配给 C906 使用
 
@@ -236,44 +236,44 @@ lunch_rtos r128s2_c906
 image-20231017135824514
 ```
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image12.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image12.png)
 
 找到 Kernel Options
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image13.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image13.png)
 
 找到 Heap Memory Manager (Use heap-4 to allocate memory) --->
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image14.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image14.png)
 
 选中 Use heap-multiple to allocate memory
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image15.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image15.png)
 
 配置 Default Heap Ram 为 heap in lpsram 配置默认内存堆为 lpsram
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image16.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image16.png)
 
 勾选 lpsram heap 和 lpsram heap dynamic address，意思是 lpsram 的内存是动态分布的
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image17.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image17.png)
 
 配置 lpsram heap size 的大小是0x600000，因为前面 2M 给 M33 使用，所以剩下 6M
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image18.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image18.png)
 
 配置 hpsram heap 使能 HPSRAM，并配置 hpsram heap start address 为 0xc000000，hpsram heap size 为 0x7FFFFF 表示将 HPSRAM 全部分配给 C906 核心使用。
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image19.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image19.png)
 
 ### 将 HPSRAM 部分分配给 C906 使用
 
 如果 HPSRAM 需要运行 DSP，可以分配部分给 C906 使用，配置 hpsram heap start address为 0xc400000，0xc000000 是 HPSRAM 的开始地址，前面 4M 已经分配给 DSP 使用；并配置 hpsram heap size 为 0x400000 意思是可以用的 HPSRAM 大小是 4M。
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image20.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image20.png)
 
 ### 配置后的内存分布情况
 
 编译打包烧录后，可以使用 free 命令查看配置后的内存分布情况。可以看到 HPSRAM 的8M内存全部分配给 C906 使用了，C906 一共可以用 4M LPSRAM + 8M HPSRAM = 12M RAM
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part4/chapter2/image21.png)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part4/chapter2/image21.png)

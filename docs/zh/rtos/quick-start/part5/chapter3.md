@@ -46,7 +46,7 @@ static struct sunxikbd_config key_config = {
 
 key_vol的配置方法，可以参考下图的GPADC-KEY的硬件设置。
 
-![image1](http://photos.100ask.net/aw-r128-docs/quick-start/part5/chapter3/image1.png)
+![image1](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part5/chapter3/image1.png)
 
 在图中，VCC输入的电压为3.3V，通过分压关系，第一个按键的电压为0.21V，因此key_vol可以设置为210，以此类推。
 

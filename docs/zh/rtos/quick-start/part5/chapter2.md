@@ -264,7 +264,7 @@ adbd service init successful
 
 PC 运行效果图如下图所示：
 
-![image1](http://photos.100ask.net/aw-r128-docs/quick-start/part5/chapter2/image1.png)
+![image1](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part5/chapter2/image1.png)
 
 #### UAC 功能
 
@@ -314,7 +314,7 @@ uacd version:AW‑V0.5, compiled on: Apr 27 2023 10:44:02
 
 启动成功之后，能够在PC 端看到新增了一个音频输入和输出的设备，如下图：
 
-![image2](http://photos.100ask.net/aw-r128-docs/quick-start/part5/chapter2/image2.png)
+![image2](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part5/chapter2/image2.png)
 
 ### USB Host 功能配置
 
@@ -554,7 +554,7 @@ PC端执行adb shell,可进入控制台。
 
 PC端执行adb shell + command, 例如adb shell ls /可以直接将结果输出到终端。
 
-![image3](http://photos.100ask.net/aw-r128-docs/quick-start/part5/chapter2/image3.png)
+![image3](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part5/chapter2/image3.png)
 
 #### adb push/pull 功能
 
@@ -566,7 +566,7 @@ adb push test.bin /data
 adb pull /data/test.bin .
 ```
 
-![image4](http://photos.100ask.net/aw-r128-docs/quick-start/part5/chapter2/image4.png)
+![image4](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part5/chapter2/image4.png)
 
 #### adb 网络连接
 
@@ -589,4 +589,4 @@ adb local transport port 是用于配置端口号的，用于在adb 网络连接
 
 则PC端执行adb connect 192.168.1.101建立连接，然后就可以开始执行adb shell等命令了。
 
-![image5](http://photos.100ask.net/aw-r128-docs/quick-start/part5/chapter2/image5.png)
+![image5](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part5/chapter2/image5.png)

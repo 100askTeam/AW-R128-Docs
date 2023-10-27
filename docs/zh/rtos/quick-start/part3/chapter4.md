@@ -15,13 +15,13 @@
 
 我们运行 mrtos_menuconfig 之后，会打开如下图所示的界面
 
-![image1](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image1.png)
+![image1](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image1.png)
 
 整个显示界面大致分为三部分
 
 上方是操作的说明和图例说明。
 
-![image2](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image2.png)
+![image2](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image2.png)
 
 - `<Enter>` 按下Enter键进入子菜单。
 - `<Y>` 按下Y键，选中这项功能。
@@ -37,11 +37,11 @@
 
 中间部分就是我们要选择的各项功能了，使用上下两个方向键进行选择，也可以使用关键字进行跳转。 
 
-![image3](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image3.png)
+![image3](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image3.png)
 
 最下方是功能选择按钮，功能与案件基本重合。使用左右方向键选择，Enter键选中。
 
-![image4](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image4.png)
+![image4](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image4.png)
 
 - `<Select> `进入下级菜单
 - `< Exit >` 退回上一级菜单，在最顶层菜单就是退出menuconfig
@@ -57,73 +57,73 @@
 
 分别选择芯片的系列，对于R128平台，使用的是 `sun20iw2p1` 平台
 
-![image5](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image5.png)
+![image5](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image5.png)
 
 ### Build OS or Library
 
 选择编译为 Library 还是 OS，这里我们使用的是 OS 所以设置为编译 OS
 
-![image6](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image6.png)
+![image6](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image6.png)
 
 ### Build System
 
 这部分配置 RTOS 的配套编译脚手架，配置编译使用的编译工具链的路径，libc的类型等等。
 
-![image7](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image7.png)
+![image7](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image7.png)
 
 ### Architecture Options 
 
 架构配置，配置CPU的架构，入口地址，分配的内存长度，RV核心的地址，DSP核心的地址。这里也也配置默认启动的核心，可以关闭 C906 和 DSP 核心的启动。
 
-![image8](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image8.png)
+![image8](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image8.png)
 
 ### Kernel Options
 
 FreeRTOS 内核相关的配置，一般不需要修改。
 
-![image9](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image9.png)
+![image9](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image9.png)
 
 ### Drivers Options
 
 驱动配置，分为 `soc related device drivers` 和 `other drivers`
 
-![image10](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image10.png)
+![image10](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image10.png)
 
 #### soc related device drivers
 
 包括各种外设驱动，与驱动的单元测试。
 
-![image11](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image11.png)
+![image11](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image11.png)
 
 #### other drivers
 
 包括 WiFi 驱动，蓝牙驱动等等
 
-![image12](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image12.png)
+![image12](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image12.png)
 
 ### System components
 
 组件选择，软件包，协议栈等相关选择
 
-![image13](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image13.png)
+![image13](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image13.png)
 
 ####  aw components
 
 全志提供的相关组件，核间通信组件，多媒体组件等。
 
-![image14](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image14.png)
+![image14](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image14.png)
 
 #### thirdparty components
 
 第三方提供的组件，lvgl，协议栈等等
 
-![image15](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image15.png)
+![image15](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image15.png)
 
 ### Projects Options 
 
 项目配置，选择项目方案
 
-![image16](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image16.png)
+![image16](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image16.png)
 
 ## menuconfig 配置保存
 
@@ -131,8 +131,8 @@ FreeRTOS 内核相关的配置，一般不需要修改。
 
 如果修改配置文件名称的话，就是将当前的配置另外保存到指定文件；不修改的话默认保存在.config中， 然后选择 **ok** 确认，就可以继续进行配置了修改了。如果不想保存，那么可以按两下 **Esc** 键返回。
 
-![image17](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image17.png)
+![image17](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image17.png)
 
 当然也可以不使用上面的操作，在全部修改都完成之后，连按 **Esc** 键，就会退出menuconfig。 在退出时会提醒是否保存配置文件，选择 **Yes** 即可保存配置，如果不想保存可以选择 **No** ， 如果还想继续修改，可以按两下 **Esc** 键返回 menuconfig 继续修改。
 
-![image18](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter4/image18.png)
+![image18](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter4/image18.png)

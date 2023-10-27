@@ -56,7 +56,7 @@ R128 平台拥有三个核心，Cortex M33 核心作为启动和安全核心，X
 source envsetup.sh
 ```
 
-![image1](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image1.png)
+![image1](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image1.png)
 
 ## 载入项目方案
 
@@ -66,41 +66,41 @@ source envsetup.sh
 lunch_rtos
 ```
 
-![image2](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image2.png)
+![image2](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image2.png)
 
 这里我们需要开发的是 `r128s2_module_c906` 方案，对应的是 R128 模块的最小化系统开发板的 C906 核心的 RTOS。输入 `1` 回车即可。
 
 第一次载入方案会解压工具链，解压完成后会提示方案载入成功：
 
-![image3](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image3.png)
+![image3](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image3.png)
 
 第二次开始就会跳过解压工具链，并且会记录上一次选择的方案。
 
-![image4](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image4.png)
+![image4](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image4.png)
 
 ## 更换项目方案
 
 在开发过程中如果需要开发 M33 核心方案，需要重新执行 ` lunch_rtos` 选择 M33 方案。
 
-![image5](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image5.png)
+![image5](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image5.png)
 
 ## 配置 RTOS 基本设置与软件包配置
 
 SDK 提供了 `mrtos_menuconfig` 命令来配置基本SDK配置与软件包。相关文档位于 [RTOS软件包配置](https://yuzukihd.top/R128Module/#/sdk_base/rtos_package)。下图为进入的配置界面。
 
-![image6](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image6.png)
+![image6](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image6.png)
 
 ## 编译系统
 
 可以使用 `m` 命令或者 `mrtos` 命令编译RTOS系统。
 
-![image7](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image7.png)
+![image7](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image7.png)
 
 ## 打包系统
 
 使用 `p` 或者 `pack` 命令打包系统
 
-![image8](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image8.png)
+![image8](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image8.png)
 
 注意，打包如果出现 
 
@@ -112,15 +112,15 @@ ERROR: mkimage run error
 
 则是因为系统配置勾选启用了这个核心但是实际没有编译这个核心的 RTOS 系统，导致找不到这个核心的 RTOS 的固件。这时候需要编译完成 RTOS 系统然后重新打包。例如报错 `err: failed to open bin file rtos_arm.fex` 
 
-![image9](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image9.png)
+![image9](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image9.png)
 
 则需要编译对应的 `arm` 核心的固件，在这里是 m33 核心。`lunch_rtos` 选择 `M33` 核心，然后 `m` 编译。
 
-![image10](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image10.png)
+![image10](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image10.png)
 
 此时 `pack` 就可以通过了
 
-![image8](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image8.png)
+![image8](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image8.png)
 
 ## 扩展命令
 
@@ -134,27 +134,27 @@ SDK 提供了 `mp` 命令以供一键编译 + 打包方案。
 
  可以使用 `muboot` 命令编译 `u-boot` 
 
-![image11](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image11.png)
+![image11](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image11.png)
 
 编译完成后会自动拷贝生成的镜像到指定位置等待打包
 
-![image12](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image12.png)
+![image12](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image12.png)
 
 ### 编译 `boot0` 
 
 可以使用 `mboot0` 编译 `boot0`，编译完成后会自动拷贝生成的镜像到指定位置等待打包
 
-![image13](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image13.png)
+![image13](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image13.png)
 
 ### 编译 `U-boot` + `boot0`
 
  可以使用 `mboot` 命令编译  `U-boot` + `boot0`
 
-![image14](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image14.png)
+![image14](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image14.png)
 
 编译完成后会自动拷贝生成的镜像到指定位置等待打包
 
-![image15](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter2/image15.png)
+![image15](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter2/image15.png)
 
 ### 文件夹跳转快捷命令
 

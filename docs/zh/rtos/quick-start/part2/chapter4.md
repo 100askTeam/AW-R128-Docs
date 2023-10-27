@@ -27,23 +27,23 @@ R128 支持使用 USB 烧写系统。对于 Windows 用户可以使用 PhoenixSu
 
 -  点击全盘擦除升级
 
-![image1](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image1.png)
+![image1](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image1.png)
 
 -  使用 USB 数据线连接 USB OTG （USB转串口也可以连接，用于烧录查错）
 
-![image2](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image2.jpg)
+![image2](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image2.jpg)
 
 -  按住 `FEL` 键，然后点击 `RESET` 键重置开发板
 
-![image3](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image3.jpg)
+![image3](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image3.jpg)
 
 -  `RESET` 点击后 PhoenixSuit 会自动进入烧录模式，开始下载
 
-![image4](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image4.png)
+![image4](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image4.png)
 
 -  烧录完成
 
-![image5](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image5.png)
+![image5](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image5.png)
 
 #### PhoenixSuit 单独分区烧录
 
@@ -52,7 +52,7 @@ R128 支持使用 USB 烧写系统。对于 Windows 用户可以使用 PhoenixSu
 -  选择单或多分区下载，PhoenixSuit 会解析固件并生成分区表
 -  选择需要下载的核心的固件
 
-![image6](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image6.png)
+![image6](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image6.png)
 
 ### PhoenixSuit - Linux
 
@@ -62,75 +62,75 @@ Linux 版本 PhoenixSuit 支持的发行版本包括 Ubuntu、Fedora、Redhat �
 
 -  下载 PhoenixSuit 到 Linux 中，解压
 
-![image7](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image7.png)
+![image7](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image7.png)
 
 -  安装依赖 dkms，对于 Ubuntu 可以用 `sudo apt install dkms dctrl_tools` 来安装
 
-!![image8](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image8.png)
+!![image8](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image8.png)
 
 -  打开终端，输入 `sudo ./PhoenixSuit.run` 来运行安装程序。
 
-![image9](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image9.png)
+![image9](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image9.png)
 
 -  使用 USB 数据线连接 USB OTG （USB转串口也可以连接，用于烧录查错）
 
-![image3](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image2.jpg)
+![image3](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image2.jpg)
 
 -  按住 `FEL` 键，然后点击 `RESET` 键重置开发板使其进入下载模式
 
-![image2](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image3.jpg)
+![image2](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image3.jpg)
 
 -  安装完成后可以用 `lsusb` 查看 USB 设备，找到 `ID 1f3a:efe8`，找到即安装完成。
 
-![image10](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image10.png)
+![image10](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image10.png)
 
 #### 烧录
 
 -  使用命令 `sudo ./PhoenixSuit rtos_xxx_uart0_16Mnor.img ` 下载烧录 `rtos_xxx_uart0_16Mnor.img`
 
-![image11](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image11.png)
+![image11](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image11.png)
 
 -  显示 `Clos image OK!` 时，按住 `FEL` 引脚，点击 `RESET` 键使芯片进入下载模式
 
-![image](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image3.jpg)
+![image](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image3.jpg)
 
 -  开始烧录
 
-![image12](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image12.png)
+![image12](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image12.png)
 
 -  烧录完成
 
-![image13](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image13.png)
+![image13](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image13.png)
 
 #### 虚拟机 Linux 烧录
 
 -  如果使用的是虚拟机连接开发板烧录，先运行 `sudo ./PhoenixSuit rtos_xxx_uart0_16Mnor.img ` 下载烧录 `rtos_xxx_uart0_16Mnor.img`，先进入下载模式。
 
-![image11](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image11.png)
+![image11](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image11.png)
 
 -  选择设备-USB，选择 Onda 设备连接虚拟机
 
-![image14](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image14.png)
+![image14](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image14.png)
 
 -  开始烧录，但是运行到 `Dev Plugout The Device Path is /dev/aw_efex0` 会卡住
 
-![image15](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image15.png)
+![image15](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image15.png)
 
 -  此时需要重新到 设备-USB 重新连接 USB 设备，这是因为芯片烧录时需要重置USB，导致USB编号变化，虚拟机不会自动连接。
 
-![image16](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image16.png)
+![image16](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image16.png)
 
 -  开始下载
 
-![image13](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image13.png)
+![image13](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image13.png)
 
 -  如果长时间没有重新连接 USB 设备，PhoenixSuit 会超时自动退出，报错如下
 
-![image17](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image17.png)
+![image17](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image17.png)
 
 -  如果刚才长时间没有重新连接，超时后连接上 USB 设备，重新运行`sudo ./PhoenixSuit rtos_xxx_uart0_16Mnor.img `下载命令。会出现 `Errpr!!!: PnpFesIn Error!` 这是因为烧录启动时的 USB 模式不匹配导致的，之前的操作导致USB进入了 `FFFF` 模式。此时需要按住 `FEL` 引脚，点击 `RESET` 键使芯片进入下载模式重新下载（下载模式会显示 `02B3`）
 
-![image18](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image18.png)
+![image18](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image18.png)
 
 ### PhoenixSuit - MacOS
 
@@ -141,7 +141,7 @@ Linux 版本 PhoenixSuit 支持的发行版本包括 Ubuntu、Fedora、Redhat �
 -  设备重新到 boot 的时候会自动进行烧写
 -  烧写成功，设备重启
 
-![image19](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image19.png)
+![image19](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image19.png)
 
 ### USB 烧写的流程
 
@@ -363,11 +363,11 @@ R128 支持使用 UART 烧写系统。
 
 请注意：R128 Module 在硬件上下拉了 PA2 引脚，默认配置为USB下载模式。如果希望使用 UART 下载需要摘除 PA2 下拉电阻，或者外部上拉 PA2 到 3V3
 
-![image20](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image20.png)
+![image20](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image20.png)
 
 PA2 下拉电阻为 47K，可以直接上拉 PA2 到 3V3 进入UART下载模式
 
-![image21](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image21.png)
+![image21](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image21.png)
 
 ### UART 下载设置
 
@@ -376,40 +376,40 @@ PA2 下拉电阻为 47K，可以直接上拉 PA2 到 3V3 进入UART下载模式
 
 如果选择太高的波特率会导致通讯错误，板载的  CH340C 仅支持最大2000000波特率
 
-![image22](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image22.png)
+![image22](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image22.png)
 
 -  点击 `刷新` 选择对应的串口
 -  点击调试进入调试界面
 
-![image23](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image23.png)
+![image23](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image23.png)
 
 如果出现 `Open uart error!` 则表示没有关闭串口助手或者选择错了串口。
 
-![image24](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image24.png)
+![image24](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image24.png)
 
 -  配置 Flash 长度，例如 R128 内置 16M NOR Flash，这里就填入 `0x1000000` 也就是 16M 长度
 -  烧写前先擦除 Flash
 -  点击写入
 
-![image25](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image25.png)
+![image25](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image25.png)
 
 -  选择 16M 固件，注意这个固件后缀名是 `.bin` ，不是 USB 烧写的 `.img` 文件
 
 > 注意：USB 烧写使用的是专有格式，需要 PhoenixSuit 解析并烧录，UART 烧写使用的是通用格式，为内置 SPI NOR 的镜像文件。
 
-![image26](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image26.png)
+![image26](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image26.png)
 
 -  提示文件较小，点击确定即可
 
-![image27](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image27.png)
+![image27](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image27.png)
 
 -  开始烧写
 
-![image28](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image28.png)
+![image28](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image28.png)
 
 -  烧写完成，下载结束
 
-![image29](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter4/image29.png)
+![image29](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter4/image29.png)
 
 ### UART mBoot 通讯协议
 

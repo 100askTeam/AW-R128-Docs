@@ -8,7 +8,7 @@
 | R128-S3-ND128R32 | R128-S3 | Arm Cortex-M33 | C906 RISC-V | HIFI5 DSP | 1MByte | \ | 32Mbyte   | 128M NAND Flash | 1 Audio DAC<br/>LINEOUTLP/N |
 
 
-![image1](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter1/image1.png)
+![image1](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter1/image1.png)
 
 
 ## 详细参数
@@ -57,5 +57,5 @@
 
 高清引脚图：[R128-S2-N16R16_PINOUT.svg](https://www.aw-ol.com/downloads?cat=22)
 
-![image2](http://photos.100ask.net/aw-r128-docs/quick-start/part2/chapter1/image2.png)
+![image2](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part2/chapter1/image2.png)
 

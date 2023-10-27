@@ -2,37 +2,37 @@
 
 ## 使用串口访问设备
 
-![image1](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image1.jpg)
+![image1](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image1.jpg)
 
 使用USB TypeC 连接线连接开发板 USB转串口 的接口，安装串口驱动程序：[CH341SER.EXE](https://www.wch.cn/download/CH341SER_EXE.html)
 
-![image2](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image2.png)
+![image2](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image2.png)
 
 到设备管理器找到需要的串口，这里是 `COM8`
 
-![image3](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image3.png)
+![image3](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image3.png)
 
 使用串口访问工具 PuTTY 打开串口，这里是 COM8，波特率 115200。
 
-![image4](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image4.png)
+![image4](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image4.png)
 
 打开之后回车即可访问控制台。
 
-![image5](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image5.png)
+![image5](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image5.png)
 
 可以输入 `help` 命令查看支持的命令。
 
-![image6](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image6.png)
+![image6](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image6.png)
 
 ## 查看三个核心运行频率
 
 连接开发板的时候可以点击 RESET 按钮重置 CPU，查看输出。
 
-![image7](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image7.jpg)
+![image7](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image7.jpg)
 
 这里可以看到 M33 核心运行频率 192MHz，DSP 运行频率 400MHz，C906 运行频率 480MHz
 
-![image8](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image8.png)
+![image8](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image8.png)
 
 ## 系统调试命令
 
@@ -44,7 +44,7 @@ help
 
 获取系统支持的终端命令
 
-![image9](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image9.png)
+![image9](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image9.png)
 
 ### backtrace
 
@@ -54,7 +54,7 @@ help
 backtrace [taskname | tasknumber]
 ```
 
-![image10](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image10.png)
+![image10](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image10.png)
 
 ### top
 
@@ -64,7 +64,7 @@ backtrace [taskname | tasknumber]
 top [‑d 2]
 ```
 
-![image11](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image11.png)
+![image11](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image11.png)
 
 ### ts
 
@@ -74,7 +74,7 @@ top [‑d 2]
 ts
 ```
 
-![image12](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image12.png)
+![image12](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image12.png)
 
 ### list_irq
 
@@ -84,7 +84,7 @@ ts
 list_irq
 ````
 
-![image13](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image13.png)
+![image13](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image13.png)
 
 ### free
 
@@ -94,7 +94,7 @@ list_irq
 free
 ```
 
-![image14](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image14.png)
+![image14](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image14.png)
 
 ### p
 
@@ -104,7 +104,7 @@ free
 p [reg_start_addr] [len]
 ```
 
-![image15](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image15.png)
+![image15](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image15.png)
 
 ### m
 
@@ -114,7 +114,7 @@ p [reg_start_addr] [len]
 m [reg_address] [reg_value]
 ```
 
-![image16](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image16.png)
+![image16](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image16.png)
 
 ### forkarg
 
@@ -124,7 +124,7 @@ m [reg_address] [reg_value]
 forkarg [‑p priority] [‑s size]
 ```
 
-![image17](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image17.png)
+![image17](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image17.png)
 
 ### fork
 
@@ -134,7 +134,7 @@ forkarg [‑p priority] [‑s size]
 fork command [arg1 ...]
 ```
 
-![image18](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image18.png)
+![image18](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image18.png)
 
 ## 文件系统命令
 
@@ -146,7 +146,7 @@ fork command [arg1 ...]
 df [path]
 ```
 
-![image19](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image19.png)
+![image19](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image19.png)
 
 ### ls
 
@@ -156,7 +156,7 @@ df [path]
 ls [‑h] [‑l] [‑k] [file1]
 ```
 
-![image20](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image20.png)
+![image20](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image20.png)
 
 ### cat
 
@@ -166,7 +166,7 @@ ls [‑h] [‑l] [‑k] [file1]
 cat <file>
 ```
 
-![image21](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image21.png)
+![image21](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image21.png)
 
 ### hexdump
 
@@ -176,5 +176,5 @@ cat <file>
 hexdump [‑n num] [‑C] file
 ```
 
-![image22](http://photos.100ask.net/aw-r128-docs/quick-start/part3/chapter5/image22.png)
+![image22](http://photos.100ask.net/aw-r128-docs/rtos/quick-start/part3/chapter5/image22.png)
 
