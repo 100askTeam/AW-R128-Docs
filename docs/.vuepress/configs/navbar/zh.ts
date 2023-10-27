@@ -7,6 +7,10 @@ export const navbarZh: NavbarConfig = [
     link: '/zh/rtos/quick-start/part1/chapter1.md',
   },
   {
+    text: '开发指南',
+    link: '/zh/rtos/developer-guide/part1/chapter1.md',
+  },
+  {
     text: `学习套件`,
     children: [
       {

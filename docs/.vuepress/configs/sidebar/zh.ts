@@ -51,4 +51,30 @@ export const sidebarZh: SidebarConfig = {
           ],
         },
       ],
+      '/zh/rtos/developer-guide/': [
+        {
+          text: '基础组件开发指南',
+          collapsible: true,
+          children: [
+            '/zh/rtos/developer-guide/part1/chapter1.md',
+            '/zh/rtos/developer-guide/part1/chapter2.md',
+            '/zh/rtos/developer-guide/part1/chapter3.md',
+            '/zh/rtos/developer-guide/part1/chapter4.md',
+            '/zh/rtos/developer-guide/part1/chapter5.md',
+            '/zh/rtos/developer-guide/part1/chapter6.md',
+            '/zh/rtos/developer-guide/part1/chapter7.md',
+            '/zh/rtos/developer-guide/part1/chapter8.md',
+            '/zh/rtos/developer-guide/part1/chapter9.md',
+            '/zh/rtos/developer-guide/part1/chapter10.md',
+            '/zh/rtos/developer-guide/part1/chapter11.md',
+          ],
+        },
+        {
+          text: 'SDK HAL 模块开发指南',
+          collapsible: true,
+          children: [
+            '/zh/rtos/developer-guide/part2/chapter1.md',
+          ],
+        },
+      ],
 }
