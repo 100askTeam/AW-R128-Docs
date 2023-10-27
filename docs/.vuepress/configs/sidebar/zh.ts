@@ -33,5 +33,13 @@ export const sidebarZh: SidebarConfig = {
             '/zh/quick-start/part3/chapter6.md',
           ],
         },
+        {
+          text: '软件配置',
+          collapsible: true,
+          children: [
+            '/zh/quick-start/part4/chapter1.md',
+            '/zh/quick-start/part4/chapter2.md',
+          ],
+        },
       ],
 }

@@ -3,7 +3,7 @@ import { version } from '../meta.js'
 
 export const navbarZh: NavbarConfig = [
   {
-    text: '入门基础',
+    text: '基础入门',
     link: '/zh/quick-start/part1/chapter1.md',
   },
   {
@@ -11,7 +11,7 @@ export const navbarZh: NavbarConfig = [
     children: [
       {
         text: 'DShanMCU-R128学习套件（全志R128-S2/S3主控芯片）',
-        link: 'https://item.taobao.com/item.htm?id=724601559592',
+        link: 'https://item.taobao.com/item.htm?id=736154682975',
       },
     ],
   },
