@@ -41,5 +41,14 @@ export const sidebarZh: SidebarConfig = {
             '/zh/quick-start/part4/chapter2.md',
           ],
         },
+        {
+          text: '外设模块配置',
+          collapsible: true,
+          children: [
+            '/zh/quick-start/part5/chapter1.md',
+            '/zh/quick-start/part5/chapter2.md',
+            '/zh/quick-start/part5/chapter3.md',
+          ],
+        },
       ],
 }
