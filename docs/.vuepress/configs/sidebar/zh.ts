@@ -100,4 +100,13 @@ export const sidebarZh: SidebarConfig = {
           ],
         },
       ],
+      '/zh/rtos/demo/': [
+        {
+          text: '综合项目开发案例',
+          collapsible: true,
+          children: [
+            '/zh/rtos/demo/part2/chapter1.md',
+          ],
+        },
+      ],
 }
