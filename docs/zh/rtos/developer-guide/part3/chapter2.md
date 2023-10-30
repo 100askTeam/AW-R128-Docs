@@ -1,121 +1,145 @@
-# 使用 VSCode 调试
+# DSP 开发工具安装
 
-## 调试 XuanTie C906 核心
+## 资料准备
 
-### 准备工具
+要编译和仿真DSP，需要以下资料：
 
-- T-Head DebugServer（CSkyDebugServer） - 搭建调试服务器
-- 下载地址：[T-Head DebugServer](https://xuantie.t-head.cn/community/download?id=4202772147627692032)
-- 手册：[T-Head Debugger Server User Guide](https://xuantie.t-head.cn/community/download?id=4170589434888130560)
-- 驱动：[cklink_dirvers](https://xuantie.t-head.cn/community/download?id=689487495854817280)
-- VSCode - 开发&调试
-- 下载地址：[VSCode](https://code.visualstudio.com/)
+- DSP 核SDK，SDK 需要包含DSP 编译源码。
+- Cadence Xtensa 的 Windows IDE 工具 (Xplorer‑8.0.13 版本)， Windows 版本 DSP 的 package 包。
+- Cadence Xtensa 的 License，用于服务器代码编译和Xplorer 仿真使用。
 
-### 配置 SDK 启用调试功能
+> 其中 Allwinner 提供 DSP 核 SDK 源码包，IDE 工具和 Licence 需要向 Cadence 申请。链接：[https://www.cadence.com/en_US/home/tools/ip/tensilica-ip/technologies.html](https://www.cadence.com/en_US/home/tools/ip/tensilica-ip/technologies.html)，Xplorer 下载链接：[https://www.cadence.com/en_US/home/tools/ip/tensilica-ip/sdk-download.html](https://www.cadence.com/en_US/home/tools/ip/tensilica-ip/sdk-download.html)。
 
-在对应的C906的 `main.c` 函数最后面加上下列代码，配置 GPIO MUX 为 JTAG
+## Linux 环境搭建
 
-```c
-writel(0x00f66660, 0x4004a40c);
+### XCC 安装
+
+把 XCC 工具链压缩包放在目录下：
+
+```
+<root>/XtDevTools/install/
+```
+
+进行解压，解压后工具链应该存放在：
+
+```
+<root>/XtDevTools/install/RI‑xxxx‑linux/XtensaTools
+```
+
+### package 包安装
+
+DSP 核配置包由数字设计提供，一般为一个tgz 压缩包，可使用以下命令自动安装：
+
+```
+./build.sh
+```
+
+### 环境变量
+
+`envsetup.sh` 环境变量主要宏如下：
+
+1. PATH 添加编译工具链bin/路径；
+2. LM_LICENSE_FILE license服务器地址；
+3. XTENSA_SYSTEM DSP核心配置包安装后的路径；
+4. XTENSA_CORE DSP核心配置包名称；
+5. XTENSA_TOOLS_DIR XCC工具链位置。
+
+当想自定义编译环境或者排除编译环境问题，可以通过检查以上宏是否设置正确。
+
+### 环境变量命令
+
+`envsetup.sh` 脚本同时导出一些命令，用于快速执行某些命令操作。
+
+1. croot // 快速跳转到DSP FreeRTOS SDK 根目录
+2. doobjdump // 执行objdump 命令反编译DSP elf 文件
+3. dogenlds // 重新生成链接脚本
+4. callstack // 执行栈回溯结果解析命令
+5. mdsp // 编译dsp
+
+### 编译代码
+
+#### 配置环境变量
+
+```
+source build/envsetup.sh
 ```
 
 ![image1](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image1.jpg)
 
-参考手册：
+#### 编译代码
+
+执行`./build.sh` 编译
+
+## 下载固件
+
+1. 把 DSP FreeRTOS SDK 目录下的 `dsp_raw.bin` 拷贝到 R128 根SDK 下的 `board/r128s/xxx/bin/` 下，并重命名为`rtos_dsp_sun20iw2p1.fex`。
+2. R128 SDK 下重新打包烧录，即可更新DSP 固件。
+
+## Windows 环境
+
+### 安装 Xtensa Xplorer
+
+Windows 下直接双击安装文件进行安装。
 
 ![image2](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image2.jpg)
 
-然后编译下载。
-
-### 安装驱动
-
-连接上CKLink，在设备管理器新增的USB设备上->右键->更新驱动程序->浏览我的电脑以查找驱动程序->浏览对应的驱动然后包括子文件夹->然后下一步即可。
+然后同意许可文件
 
 ![image3](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image3.jpg)
 
-### 运行配置CSkyDebugServer
-
-```
-CSkyDebugServer->setting->Target Setting
-```
+记得修改下载的地址
 
 ![image4](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image4.jpg)
 
-```
-SkyDebugServer->setting->Target Setting
-```
+选择 “否”
 
 ![image5](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image5.jpg)
 
-### 启动CSkyDebugServer
-
-确保R128正常运行，CKLink 正常连接，点击红色按钮启动调试
+点击 Next -> Next -> Next -> Next
 
 ![image6](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image6.jpg)
 
-此时如果电脑本地上有编译环境，可以使用 `riscv64-unknown-elf-gdb` 进行调试，假设编译获得的文件路径为 `/lichee/rtos/build/r128_module_c906/img/rt_system.elf`，运行命令如下：
-
-```
-riscv64-unknown-elf-gdb -ex 'set arch riscv:rv64' -ex 'file ./lichee/rtos/build/r128_module_c906/img/rt_system.elf' -ex 'set remotetimeout 20' -ex 'target remote 127.0.0.1:3333'
-```
-
-也可以如下操作
-
-```
-riscv64-unknown-elf-gdb ./lichee/rtos/build/r128_module_c906/img/rt_system.elf
-
-控制台界面输入
-set remotetimeout 20
-target remote :3333
-才可以建立连接
-```
-
-### 配置 VSCode
-
-配置如下 `.vscode/launch.json` 文件
-
-```json
-{
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "(gdb) Launch",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/lichee/rtos/build/r128_module_c906/img/rt_system.elf", // 对应板子方案的elf文件
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "miDebuggerPath": "${workspaceFolder}/lichee/rtos/tools/riscv64-elf-x86_64-20201104/bin/riscv64-unknown-elf-gdb",
-            "miDebuggerServerAddress": "localhost:3333", // 端口号，本文电脑的CSkyDebugServer端口3333
-            "setupCommands": [ // 不能省略否则会报错，报错如下
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "set remotetimeout 20",
-                    "ignoreFailures": true
-                }
-            ]
-        }
-    ]
-}
-```
-
-省略后的报错：
-
-```
-Remote replied unexpectedly to 'vMustReplyEmpty': PacketSize=1000;QStartNoAckMode+;qThreadExtraInfo+;qXfer:features:read+
-```
-
-### 开始调试
-
-点击 VSCode 调试按键，开始调试。
+开始安装
 
 ![image7](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image7.jpg)
 
+去掉这个勾
+
+![image8](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image8.jpg)
+
+选择工作环境
+
+![image9](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image9.jpg)
+
+初始化中
+
+![image10](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image10.jpg)
+
+### License 配置
+
+在这里配置 License 即可
+
+![image11](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image11.jpg)
+
+### 安装 package 包
+
+检查 package
+
+![image12](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image12.jpg)
+
+没有对应package，我们要手动安装：
+
+![image13](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image13.jpg)
+
+选择此项
+
+![image14](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image14.jpg)
+
+找到 package 的 tgz 文件
+
+![image15](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image15.jpg)
+
+导入即可
+
+![image16](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter2/image16.jpg)
 

@@ -117,12 +117,20 @@ export const sidebarZh: SidebarConfig = {
           ],
         },
         {
-          text: '调试指南',
+          text: 'DSP开发指南',
           collapsible: true,
           children: [
             '/zh/rtos/developer-guide/part3/chapter1.md',
             '/zh/rtos/developer-guide/part3/chapter2.md',
-            '/zh/rtos/developer-guide/part3/chapter3.md',
+          ],
+        },
+        {
+          text: '调试指南',
+          collapsible: true,
+          children: [
+            '/zh/rtos/developer-guide/part4/chapter1.md',
+            '/zh/rtos/developer-guide/part4/chapter2.md',
+            '/zh/rtos/developer-guide/part4/chapter3.md',
           ],
         },
       ],

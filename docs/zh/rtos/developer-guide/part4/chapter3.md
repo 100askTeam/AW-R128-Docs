@@ -16,7 +16,7 @@
 
   rtplayer_test 循环播放老化音频十几分钟后，音乐停止播放，报错如下：
 
-  ![image1](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter3/image1.jpg)
+  ![image1](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part4/chapter3/image1.jpg)
 
 ## 问题分析
 
@@ -181,4 +181,4 @@ startSoundDevice at /workspace/codec_lib/cedarx_rtos/temp/rtos_cedarx/cedarx/rto
 
 只在`AudioTrackCreateWithStream`时创建一次，`AudioTrackDestroy`，测试10小时左右未出现内存泄漏
 
-![image1](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part3/chapter3/image2.jpg)
+![image1](http://photos.100ask.net/aw-r128-docs/rtos/developer-guide/part4/chapter3/image2.jpg)
