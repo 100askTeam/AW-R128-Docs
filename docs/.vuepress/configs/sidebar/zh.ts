@@ -102,6 +102,25 @@ export const sidebarZh: SidebarConfig = {
       ],
       '/zh/rtos/demo/': [
         {
+          text: '应用开发案例',
+          collapsible: true,
+          children: [
+            '/zh/rtos/demo/part1/chapter1.md',
+            '/zh/rtos/demo/part1/chapter2.md',
+            '/zh/rtos/demo/part1/chapter3.md',
+            '/zh/rtos/demo/part1/chapter4.md',
+            '/zh/rtos/demo/part1/chapter5.md',
+            '/zh/rtos/demo/part1/chapter6.md',
+            '/zh/rtos/demo/part1/chapter7.md',
+            '/zh/rtos/demo/part1/chapter8.md',
+            '/zh/rtos/demo/part1/chapter9.md',
+            '/zh/rtos/demo/part1/chapter10.md',
+            '/zh/rtos/demo/part1/chapter11.md',
+            '/zh/rtos/demo/part1/chapter12.md',
+            '/zh/rtos/demo/part1/chapter13.md',
+          ],
+        },
+        {
           text: '综合项目开发案例',
           collapsible: true,
           children: [
