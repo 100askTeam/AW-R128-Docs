@@ -32,6 +32,12 @@
 
 如果你不想自己编译或者不需要二次开发，那么可以从这里获取固件，烧写固件到[DShanMCU-R128s2-DevKit](https://item.taobao.com/item.htm?id=736154682975)后开机会自动启动NWatch任务，如果没有自动启动在串口终端输入命令然后按回车即可： `nwatch_100ask 3`。模块接线请阅读[模块接线](#模块接线)小节。
 
+Releases获取：
+
+- Gitee：[https://gitee.com/weidongshan/100ask_r128_demos/releases/tag/v0.0.1](https://gitee.com/weidongshan/100ask_r128_demos/releases/tag/v0.0.1)
+- GitHub：[https://github.com/100askTeam/100ask_r128_demos/releases/tag/v0.0.1](https://github.com/100askTeam/100ask_r128_demos/releases/tag/v0.0.1)
+
+
 ## 二次开发
 
 ### 修改 sys_config.fex
