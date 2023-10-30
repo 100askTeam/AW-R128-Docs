@@ -50,6 +50,15 @@ export const sidebarZh: SidebarConfig = {
             '/zh/rtos/quick-start/part5/chapter3.md',
           ],
         },
+        {
+          text: '硬件设计',
+          collapsible: true,
+          children: [
+            '/zh/rtos/quick-start/part6/chapter1.md',
+            '/zh/rtos/quick-start/part6/chapter2.md',
+            '/zh/rtos/quick-start/part6/chapter3.md',
+          ],
+        },
       ],
       '/zh/rtos/developer-guide/': [
         {
