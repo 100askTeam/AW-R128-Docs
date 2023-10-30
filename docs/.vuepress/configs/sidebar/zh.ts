@@ -99,6 +99,15 @@ export const sidebarZh: SidebarConfig = {
             '/zh/rtos/developer-guide/part2/chapter24.md',
           ],
         },
+        {
+          text: '调试指南',
+          collapsible: true,
+          children: [
+            '/zh/rtos/developer-guide/part3/chapter1.md',
+            '/zh/rtos/developer-guide/part3/chapter2.md',
+            '/zh/rtos/developer-guide/part3/chapter3.md',
+          ],
+        },
       ],
       '/zh/rtos/demo/': [
         {
