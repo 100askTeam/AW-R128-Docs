@@ -59,6 +59,14 @@ export const sidebarZh: SidebarConfig = {
             '/zh/rtos/quick-start/part6/chapter3.md',
           ],
         },
+        {
+          text: '其他',
+          collapsible: true,
+          children: [
+            '/zh/rtos/quick-start/part7/chapter1.md',
+            '/zh/rtos/quick-start/part7/chapter2.md',
+          ],
+        },
       ],
       '/zh/rtos/developer-guide/': [
         {
