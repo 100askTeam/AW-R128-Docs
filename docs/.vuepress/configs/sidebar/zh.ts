@@ -3,6 +3,13 @@ import type { SidebarConfig } from '@vuepress/theme-default'
 export const sidebarZh: SidebarConfig = {
     '/zh/rtos/quick-start/': [
         {
+          text: '视频教程',
+          collapsible: true,
+          children: [
+            '/zh/rtos/quick-start/video_course.md',
+          ],
+        },
+        {
           text: '芯片概述',
           collapsible: true,
           children: [

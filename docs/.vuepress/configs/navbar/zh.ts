@@ -24,6 +24,24 @@ export const navbarZh: NavbarConfig = [
     ],
   },
   {
+    text: `视频教程`,
+    children: [
+      {
+        text: '教程汇总',
+        link: '/zh/rtos/quick-start/video_course.md',
+      },
+      {
+        text: '入门教程',
+        children: [
+          {
+            text: '基于DShanMCU-R128S2_DevKit的入门教程',
+            link: 'https://www.bilibili.com/video/BV1oC4y1w7AH',
+          },
+        ]
+      },
+    ],
+  },
+  {
     text: `关于我们`,
     children: [
       {
