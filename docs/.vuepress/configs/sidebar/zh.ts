@@ -146,6 +146,7 @@ export const sidebarZh: SidebarConfig = {
           text: '应用开发案例',
           collapsible: true,
           children: [
+            '/zh/rtos/demo/part1/chapter0.md',
             '/zh/rtos/demo/part1/chapter1.md',
             '/zh/rtos/demo/part1/chapter2.md',
             '/zh/rtos/demo/part1/chapter3.md',
