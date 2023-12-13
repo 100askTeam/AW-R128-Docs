@@ -12,7 +12,7 @@ export const navbarZh: NavbarConfig = [
   },
   {
     text: '开发案例',
-    link: '/zh/rtos/demo/part2/chapter1.md',
+    link: '/zh/rtos/demo/part1/chapter0.md',
   },
   {
     text: `学习套件`,

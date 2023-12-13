@@ -161,6 +161,7 @@ export const sidebarZh: SidebarConfig = {
             '/zh/rtos/demo/part1/chapter12.md',
             '/zh/rtos/demo/part1/chapter13.md',
             '/zh/rtos/demo/part1/chapter14.md',
+            '/zh/rtos/demo/part1/chapter15.md',
           ],
         },
         {
