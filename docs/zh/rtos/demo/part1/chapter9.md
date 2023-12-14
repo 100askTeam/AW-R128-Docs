@@ -15,6 +15,11 @@ R128 平台提供了 SPI DBI 的 SPI TFT 接口，具有如下特点：
 
 这里的示例以百问网的SPI LCD为例。
 
+屏幕获取：
+
+- [https://item.taobao.com/item.htm?id=736154682975](https://item.taobao.com/item.htm?id=736154682975)
+- 或[https://item.taobao.com/item.htm?&id=707079371679](https://item.taobao.com/item.htm?&id=707079371679)
+
 ## 接线
 
 | LCD Pin | R128 Pin |
@@ -32,12 +37,7 @@ R128 平台提供了 SPI DBI 的 SPI TFT 接口，具有如下特点：
 
 ## 覆盖spilcd目录
 
-获取[100ask_r128_demos](https://gitee.com/weidongshan/100ask_r128_demos)仓库源码：
-
-- GitHub: [https://github.com/100askTeam/100ask_r128_demos](https://github.com/100askTeam/100ask_r128_demos)
-- Gitee: [https://gitee.com/weidongshan/100ask_r128_demos](https://gitee.com/weidongshan/100ask_r128_demos)
-
-将 `other/spi_lcd/spilcd`文件夹，复制覆盖到SDK中位于`R128-FreeRTOS/lichee/rtos-hal/hal/source/spilcd`的目录。
+将此目录下的名为`spilcd`的文件夹，复制覆盖到SDK中位于`R128-FreeRTOS/lichee/rtos-hal/hal/source/spilcd`的目录。
 
 ## 配置menuconfig
 
@@ -355,7 +355,9 @@ lcd_spi_dc_pin      = port:PA04<1><0><3><0>
 添加屏幕旋转处理：
 
 ```c
-/*Initialize and register a display driver*/
+    printf("sunxifb_get_sizes width:%d, height:%d, width * height * sizeof(lv_color_t):%d\n", width, height, width * height * sizeof(lv_color_t));
+
+    /*Initialize and register a display driver*/
     static lv_disp_drv_t disp_drv;
     lv_disp_drv_init(&disp_drv);
     disp_drv.draw_buf   = &disp_buf;

@@ -7,6 +7,7 @@
 - 屏幕+驱动板：[https://item.taobao.com/item.htm?id=736154682975](https://item.taobao.com/item.htm?id=736154682975)
 - DShanMCU-R128 RGBDevkit 显示开发学习板：[https://item.taobao.com/item.htm?id=736154682975](https://item.taobao.com/item.htm?id=736154682975)
 
+
 ## 选择devkit_rgb方案
 
 初始化环境变量，选择方案：
