@@ -17,35 +17,37 @@
 
 方案使用方法，请[点击这里](https://aw-r128.100ask.net/zh/rtos/demo/part2/chapter1.html)查看。
 
-初始化环境变量，选择方案：
+初始化环境变量，选择方案(r128s2_devkit_100ask_rgb_c906与r128s2_devkit_100ask_rgb_m33)：
 
 ```shell
 100ask@100ask:~/R128-FreeRTOS/SDK$ source envsetup.sh 
 Setup env done!
 Run lunch_rtos to select project
-100ask@100ask:~/R128-FreeRTOS/SDK$ lunch_rtos 
-last=r128-devkit-100ask-rgb_c906
+100ask@100ask:~/R128-FreeRTOS/SDK$ lunch_rtos
+last=r128s2_devkit_c906
 
 You're building on Linux
 
 Lunch menu... pick a combo:
-     1. r128s2_devkit_c906
-     2. r128s2_devkit_m33
-     3. r128-devkit-100ask-rgb_c906
-     4. r128-devkit-100ask-rgb_m33
-     5. r128s2_evt_c906
-     6. r128s2_evt_m33
+     1. r128s2_devkit_100ask_rgb_c906
+     2. r128s2_devkit_100ask_rgb_m33
+     3. r128s2_devkit_c906
+     4. r128s2_devkit_m33
+     5. r128s2_devkit_rgb_c906
+     6. r128s2_devkit_rgb_m33
+     7. r128s2_evt_c906
+     8. r128s2_evt_m33
 
-Which would you like? [Default r128s2_devkit_c906]: 3
-select=3...
-r128s2/devkit_rgb_c906
-'/home/100ask/R128-FreeRTOS/SDK/lichee/rtos/projects/r128s2/devkit_rgb_c906/defconfig' -> '/home/100ask/R128-FreeRTOS/SDK/lichee/rtos/.config'
+Which would you like? [Default r128s2_devkit_c906]: 1
+select=1...
+r128s2/devkit_100ask_rgb_c906
+'/home/100ask/R128-FreeRTOS/SDK/lichee/rtos/projects/r128s2/devkit_100ask_rgb_c906/defconfig' -> '/home/100ask/R128-FreeRTOS/SDK/lichee/rtos/.config'
 ============================================
 RTOS_BUILD_TOP=/home/100ask/R128-FreeRTOS/SDK
 RTOS_TARGET_ARCH=riscv
 RTOS_TARGET_CHIP=sun20iw2p1
 RTOS_TARGET_DEVICE=r128s2
-RTOS_PROJECT_NAME=r128-devkit-100ask-rgb_c906
+RTOS_PROJECT_NAME=r128s2_devkit_100ask_rgb_c906
 ============================================
 Run mrtos_menuconfig to config rtos
 Run m or mrtos to build rtos
@@ -249,7 +251,7 @@ Drivers Options  --->
         		[ ]   enable touchscreen drivers APIs test command
     soc related device drivers  --->
         EFUSE Devices  --->
-            -*- enable efuse driver
+            [*] enable efuse driver
             [ ]   enable efuse hal APIs test command
 
 ```
