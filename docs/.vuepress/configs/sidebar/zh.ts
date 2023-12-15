@@ -169,6 +169,7 @@ export const sidebarZh: SidebarConfig = {
           collapsible: true,
           children: [
             '/zh/rtos/demo/part2/chapter1.md',
+            '/zh/rtos/demo/part2/chapter2.md',
           ],
         },
       ],

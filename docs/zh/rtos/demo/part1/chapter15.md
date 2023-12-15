@@ -1,6 +1,6 @@
 # R128使用RGB LCD
 
-这里的示例以百问网的7寸（1024*600）、4寸方屏（480*480）、4寸圆屏RGB（480*480） LCD为例。
+这里的示例以百问网的7寸（1024x600）、4寸方屏（480x480）、4寸圆屏RGB（480x480） LCD为例。
 
 硬件列表：
 
@@ -8,7 +8,14 @@
 - DShanMCU-R128 RGBDevkit 显示开发学习板：[https://item.taobao.com/item.htm?id=736154682975](https://item.taobao.com/item.htm?id=736154682975)
 
 
-## 选择devkit_rgb方案
+## 选择方案
+
+这里建议用百问网提供的 [r128-devkit-100ask-rgb](https://gitee.com/weidongshan/100ask_r128_demos/tree/master/other/RGB_LCD) 方案，仓库地址:
+
+- Gitee： [https://gitee.com/weidongshan/100ask_r128_demos/tree/master/other/RGB_LCD](https://gitee.com/weidongshan/100ask_r128_demos/tree/master/other/RGB_LCD)
+- GitHub：[https://github.com/100askTeam/100ask_r128_demos/tree/master/other/RGB_LCD](https://github.com/100askTeam/100ask_r128_demos/tree/master/other/RGB_LCD)
+
+方案使用方法，请[点击这里](https://aw-r128.100ask.net/zh/rtos/demo/part2/chapter1.html)查看。
 
 初始化环境变量，选择方案：
 
@@ -17,15 +24,15 @@
 Setup env done!
 Run lunch_rtos to select project
 100ask@100ask:~/R128-FreeRTOS/SDK$ lunch_rtos 
-last=r128s2_devkit_rgb_c906
+last=r128-devkit-100ask-rgb_c906
 
 You're building on Linux
 
 Lunch menu... pick a combo:
      1. r128s2_devkit_c906
      2. r128s2_devkit_m33
-     3. r128s2_devkit_rgb_c906
-     4. r128s2_devkit_rgb_m33
+     3. r128-devkit-100ask-rgb_c906
+     4. r128-devkit-100ask-rgb_m33
      5. r128s2_evt_c906
      6. r128s2_evt_m33
 
@@ -38,7 +45,7 @@ RTOS_BUILD_TOP=/home/100ask/R128-FreeRTOS/SDK
 RTOS_TARGET_ARCH=riscv
 RTOS_TARGET_CHIP=sun20iw2p1
 RTOS_TARGET_DEVICE=r128s2
-RTOS_PROJECT_NAME=r128s2_devkit_rgb_c906
+RTOS_PROJECT_NAME=r128-devkit-100ask-rgb_c906
 ============================================
 Run mrtos_menuconfig to config rtos
 Run m or mrtos to build rtos
@@ -61,6 +68,7 @@ Drivers Options  --->
             [ ]   enable twi hal APIs test command
         Video support for sunxi  --->
         	[*] DISP Driver Support(sunxi-disp2)
+            ......
 
 
 # 2. 打开LVGL相关配置
@@ -216,7 +224,7 @@ lcd_gpio_21              = port:PA21<8><0><3><0>
 
 ```c
 /*Color depth: 1 (1 byte per pixel), 8 (RGB332), 16 (RGB565), 32 (ARGB8888)*/
-#define LV_COLOR_DEPTH 32
+#define LV_COLOR_DEPTH 32  /*这里可以改为16，因为de会自动转换到32位，最终显示还是32位色深*/
 
 /*Swap the 2 bytes of RGB565 color. Useful if the display has an 8-bit interface (e.g. SPI)*/
 #define LV_COLOR_16_SWAP 0
@@ -238,7 +246,12 @@ Drivers Options  --->
         		[ ]   enable tlsc6x touchscreen driver
         		[*]   enable gt911 touchscreen driver
         		[ ]   enable cst226se touchscreen driver
-        		[ ]   enable touchscreen drivers APIs test command      
+        		[ ]   enable touchscreen drivers APIs test command
+    soc related device drivers  --->
+        EFUSE Devices  --->
+            -*- enable efuse driver
+            [ ]   enable efuse hal APIs test command
+
 ```
 ### sys_config.fex配置
 
