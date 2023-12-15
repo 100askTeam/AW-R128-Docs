@@ -7,6 +7,7 @@
 - 屏幕+驱动板：[https://item.taobao.com/item.htm?id=736154682975](https://item.taobao.com/item.htm?id=736154682975)
 - DShanMCU-R128 RGBDevkit 显示开发学习板：[https://item.taobao.com/item.htm?id=736154682975](https://item.taobao.com/item.htm?id=736154682975)
 
+R128驱动不同尺寸RGB LCD的效果演示：[https://www.bilibili.com/video/BV1Pa4y1o7sF](https://www.bilibili.com/video/BV1Pa4y1o7sF)
 
 ## 选择方案
 
