@@ -46,6 +46,7 @@ export const sidebarZh: SidebarConfig = {
           children: [
             '/zh/rtos/quick-start/part4/chapter1.md',
             '/zh/rtos/quick-start/part4/chapter2.md',
+            '/zh/rtos/quick-start/part4/chapter3.md',
           ],
         },
         {
