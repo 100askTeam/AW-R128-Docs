@@ -133,6 +133,7 @@ export const sidebarZh: SidebarConfig = {
           children: [
             '/zh/rtos/developer-guide/part3/chapter1.md',
             '/zh/rtos/developer-guide/part3/chapter2.md',
+            '/zh/rtos/developer-guide/part3/chapter3.md',
           ],
         },
         {
