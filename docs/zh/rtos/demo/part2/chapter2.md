@@ -6,6 +6,8 @@
 
 > 与原作者的NWatch不一样的是，将其移植到[DShanMCU-R128s2-DevKit开发板](https://item.taobao.com/item.htm?id=736154682975)上，同时相比于原作者添加了一些功能，比如恢复出厂设置功能，后续有时间会慢慢增加更多的功能。
 
+> 本章节**视频教程**：[https://www.bilibili.com/video/BV1oC4y1w7AH?p=26](https://www.bilibili.com/video/BV1oC4y1w7AH?p=26)
+
 ## 运行效果
 
 [点击这里观看视频。](https://bbs.aw-ol.com/topic/4413/%E7%A7%BB%E6%A4%8Dnwatch%E5%88%B0r128-devkit/3)

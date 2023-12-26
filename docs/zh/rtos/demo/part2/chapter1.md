@@ -9,6 +9,8 @@ R128平台通过执行 lunch_rtos 载入（切换）方案，那么如何添加�
 - Gitee： [https://gitee.com/weidongshan/100ask_r128_demos/tree/master/other/RGB_LCD](https://gitee.com/weidongshan/100ask_r128_demos/tree/master/other/RGB_LCD)
 - GitHub：[https://github.com/100askTeam/100ask_r128_demos/tree/master/other/RGB_LCD](https://github.com/100askTeam/100ask_r128_demos/tree/master/other/RGB_LCD)
 
+> 本章节**视频教程**：[https://www.bilibili.com/video/BV1oC4y1w7AH?p=21](https://www.bilibili.com/video/BV1oC4y1w7AH?p=21)
+
 ## 添加板级配置
 
 在 `SDK/board` 目录下添加自己的板子配置，我们以r128s2芯片为例。
