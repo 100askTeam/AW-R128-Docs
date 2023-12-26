@@ -92,6 +92,7 @@ export const sidebarZh: SidebarConfig = {
             '/zh/rtos/developer-guide/part1/chapter9.md',
             '/zh/rtos/developer-guide/part1/chapter10.md',
             '/zh/rtos/developer-guide/part1/chapter11.md',
+            '/zh/rtos/developer-guide/part1/chapter12.md',
           ],
         },
         {
@@ -132,6 +133,7 @@ export const sidebarZh: SidebarConfig = {
           children: [
             '/zh/rtos/developer-guide/part3/chapter1.md',
             '/zh/rtos/developer-guide/part3/chapter2.md',
+            '/zh/rtos/developer-guide/part3/chapter3.md',
           ],
         },
         {
@@ -165,6 +167,9 @@ export const sidebarZh: SidebarConfig = {
             '/zh/rtos/demo/part1/chapter13.md',
             '/zh/rtos/demo/part1/chapter14.md',
             '/zh/rtos/demo/part1/chapter15.md',
+            '/zh/rtos/demo/part1/chapter16.md',
+            '/zh/rtos/demo/part1/chapter17.md',
+            '/zh/rtos/demo/part1/chapter18.md',
           ],
         },
         {
