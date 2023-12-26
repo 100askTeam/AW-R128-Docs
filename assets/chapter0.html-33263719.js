@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-520c490c","path":"/zh/rtos/demo/part1/chapter0.html","title":"应用示例合集-100ASK_R128_DEMO","lang":"中文简体","frontmatter":{},"headers":[],"git":{"updatedTime":1702632422000,"contributors":[{"name":"YobeZhou","email":"smilezyb@163.com","commits":2}]},"filePathRelative":"zh/rtos/demo/part1/chapter0.md"}');export{t as data};
