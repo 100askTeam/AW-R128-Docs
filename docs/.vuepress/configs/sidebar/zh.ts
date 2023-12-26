@@ -92,6 +92,7 @@ export const sidebarZh: SidebarConfig = {
             '/zh/rtos/developer-guide/part1/chapter9.md',
             '/zh/rtos/developer-guide/part1/chapter10.md',
             '/zh/rtos/developer-guide/part1/chapter11.md',
+            '/zh/rtos/developer-guide/part1/chapter12.md',
           ],
         },
         {
